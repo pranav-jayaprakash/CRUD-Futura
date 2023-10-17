@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { Pushdata } from '../reddux/Dataslice'
-import { publucRequest } from '../Requestmethod'
+import { publucRequest, userRequest } from '../Requestmethod'
 export const signUpdata =async (data)=>{
 
     console.log(data, 'initial data')
@@ -21,7 +21,7 @@ export const signUpdata =async (data)=>{
 export const LoginData = async (data,dispatch)=>{
     try {
 
-        const res = await axios.post('http://localhost:8001/api/login',data)
+        const res = await publucRequest.post('/login',data)
         console.log("Final daata",res.data)
         dispatch(Pushdata(res.data))
         
@@ -34,7 +34,7 @@ export const UpdateData = async (data,id)=>{
 
     console.log(data,id,'Got data')
     try {
-        const Upd= await axios.put(`http://localhost:8001/api/update/${id}`,data)
+        const Upd= await userRequest.put(`http://localhost:8001/api/update/${id}`,data)
         console.log(Upd,'Updated data')
         
     } catch (error) {

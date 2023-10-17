@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const ussr = require("../models/user");
 const crypto = require("crypto-js");
+const { verifyToken, verifyTokenandAuthorization } = require("../verifyToken");
 
-router.put("/:id", async (req, res) => {
+router.put("/:id",verifyToken,verifyTokenandAuthorization, async (req, res) => {
   
   console.log(req.body,'backend data')
   try {
