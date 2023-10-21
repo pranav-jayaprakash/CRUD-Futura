@@ -34,7 +34,7 @@ router.put("/:id",verifyToken,verifyTokenandAuthorization, async (req, res) => {
   }
 });
 
-router.delete('/delete/:id' ,verifyToken,verifyTokenandAuthorization,async (req,res)=>{
+router.delete('/delete/:id' ,async (req,res)=>{
   try {
 
     await ussr.findByIdAndDelete(req.params.id)
