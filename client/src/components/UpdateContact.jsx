@@ -13,6 +13,13 @@ function UpdateContact() {
   const [address, setAddress] = useState("");
   const [password, setpassword] = useState("");
 
+  const DataData =new FormData()
+
+  DataData.append('username',username)
+  DataData.append('email',email)
+  DataData.append('address',address)
+  DataData.append('password',password)
+
   useEffect(() => {
     setName(Currentdata[0] && Currentdata[0].username);
     setEmail(Currentdata[0] && Currentdata[0].email);
@@ -22,17 +29,14 @@ function UpdateContact() {
   
   console.log("input data", {username,email,password,address})
 
+
+
   const display = (e) => {
     e.preventDefault();
-    const formData =new FormData()
+    
 
-  formData.append('username',username)
-  formData.append('email',email)
-  formData.append('address',address)
-  formData.append('password',password)
-
-  console.log(formData,"****&&&&%%$$$")
-    UpdateData(formData,iddata);
+  console.log(DataData,"****&&&&%%$$$")
+    UpdateData(DataData,iddata);
   };
 
   return (

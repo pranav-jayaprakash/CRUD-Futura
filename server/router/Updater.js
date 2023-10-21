@@ -23,7 +23,7 @@ router.put("/:id",verifyToken,verifyTokenandAuthorization, async (req, res) => {
     const updateuser = await ussr.findByIdAndUpdate(
       req.params.id,
       {
-        $set: dataupdate
+        $set: req.body
       },
       { new: true }
     );
@@ -34,7 +34,7 @@ router.put("/:id",verifyToken,verifyTokenandAuthorization, async (req, res) => {
   }
 });
 
-router.delete('/delete/:id' ,async (req,res)=>{
+router.delete('/delete/:id' ,verifyToken,verifyTokenandAuthorization,async (req,res)=>{
   try {
 
     await ussr.findByIdAndDelete(req.params.id)

@@ -51,7 +51,7 @@ router.post("/login", async (req, res) => {
         id: client._id,
       },
       process.env.JWTSEC,
-      { expiresIn: "1d" }
+      { expiresIn: "3d" }
     );
 
     console.log("clienttttt",);

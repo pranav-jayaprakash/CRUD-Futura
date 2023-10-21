@@ -46,7 +46,7 @@ export const UpdateData = async (data,id)=>{
 export const DeleteData = async (id)=>{
     try {
 
-        const del= await axios.delete(`http://localhost:8001/api/update/delete/${id}`)
+        const del= await userRequest.delete(`http://localhost:8001/api/update/delete/${id}`)
         console.log(del)
         
     } catch (error) {
