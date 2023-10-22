@@ -8,11 +8,11 @@ function AdminSign() {
 
   return (
     <div>
-        <form action="">
-            <input type="text" />
-            <input type="email" />
-            <input type="password" />
-            <input type="text" />
+        <form action="" encType='multipart/form-data'>
+            <input type="text" placeholder='username' onChange={(e)=>setusername(e.target.value)}/>
+            <input type="email" placeholder='email' onChange={(e)=>setemail(e.target.value)}/>
+            <input type="password" placeholder='password' onChange={(e)=>setaddress(e.target.value)}/>
+            <input type="text" placeholder='address' onChange={(e)=>setpassword(e.target.value)}/>
             <input type="submit" />
         </form>
         
