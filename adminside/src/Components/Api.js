@@ -3,7 +3,7 @@ import axios from "axios";
 export const Dataget = async () => {
   try {
     const data = await axios.get("http://localhost:8001/api");
-    console.log(data, "ADMIN data ");
+    console.log(data, "ADMIN data recieved");
 
     return data;
   } catch (error) {
