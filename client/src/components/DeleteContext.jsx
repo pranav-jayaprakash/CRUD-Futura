@@ -9,7 +9,7 @@ function DeleteContext() {
     const dispatch=useDispatch()
 
     var Currentdata = useSelector(state=>state.Userdata.loginData)
-  console.log("current dataz",Currentdata)
+  console.log("current data",Currentdata)
 
   const iddata= Currentdata[0]&&Currentdata[0]._id
 
