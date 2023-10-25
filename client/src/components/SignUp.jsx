@@ -9,12 +9,13 @@ function SignUp() {
     const [email, setEmail] = useState('')
     const [address, setAddress] = useState('')
     const [password, setpassword] = useState('')
+    const [image,setimage] = useState({})
 
 
 const display=(e)=>{
     e.preventDefault()
     signUpdata({
-        username,email,address,password
+        username,email,address,password,image
     })
 
 
@@ -25,6 +26,7 @@ const display=(e)=>{
             <input type="text" placeholder='username' value={username} onChange={(e)=>setName(e.target.value)}/>
             <input type="text" placeholder='email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
             <input type="text" placeholder='address' value={address} onChange={(e)=>setAddress(e.target.value)}/>
+            <input type='file' filename='Images' onChange={(e)=>setimage(e.target.files[0])}/>
             <input type="text" placeholder='password' value={password} onChange={(e)=>setpassword(e.target.value)}/>
             <input type="submit" />
         </form>

@@ -12,7 +12,9 @@ function AdminSign() {
     Formdata.append('names',name)
     Formdata.append('emails',email)
 
-    function Submitkaro() {
+    function Submitkaro(e) {
+        e.preventDefault()
+        
         SignupData(Formdata)
     }
 

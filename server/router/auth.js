@@ -3,6 +3,9 @@ const ussr = require("../models/user");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
 
+
+
+
 router.post("/", async (req, res) => {
   console.log(req.body, 'backend data')
   const adddata = new ussr({

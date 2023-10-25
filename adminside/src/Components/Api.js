@@ -5,6 +5,7 @@ export const SignupData = async (Data) =>{
   console.log(Data,"Sign Data")
   try {
     const SignDetails = await axios.post("http://localhost:8001/api",Data)
+    console.log(SignDetails,"Sign Data Two")
   } catch (error) {
     console.log(error)
   }
