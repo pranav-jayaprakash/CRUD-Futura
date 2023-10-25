@@ -1,5 +1,14 @@
 import axios from "axios";
 
+
+export const SignupData = async (Data) =>{
+  console.log(Data,"Sign Data")
+  try {
+    const SignDetails = await axios.post("http://localhost:8001/api",Data)
+  } catch (error) {
+    console.log(error)
+  }
+}
 export const Dataget = async () => {
   try {
     const data = await axios.get("http://localhost:8001/api");
