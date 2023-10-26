@@ -9,7 +9,7 @@ function AdminHome() {
     async function display() {
       const FullData = await Dataget();
       setdata(FullData.data)
-      console.log(FullData, "FULL DATA");
+      console.log(FullData, "FULL DATA HERE");
     }
     display();
   }, []);
