@@ -2,12 +2,25 @@ const router = require("express").Router();
 const ussr = require("../models/user");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
+const multer = require('multer');
 
 
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, '../client/public/Images')
+  },
+  filename: function (req, file, cb) {
+    
+    cb(null, file.originalname)
+  }
+})
 
+const upload = multer({ storage: storage })
 
-router.post("/", async (req, res) => {
+router.post("/",upload.single('Images'), async (req, res) => {
   console.log(req.body, 'backend data')
+  console.log(req.files,"Image recieved")
+  console.log(req.file,"Image recieved")
   const adddata = new ussr({
     username: req.body.username,
     email: req.body.email,
