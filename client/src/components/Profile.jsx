@@ -25,18 +25,20 @@ function Profile() {
   console.log("Final data", first);
 
   return (
-    // <div>
-    //   {first.map((display) => (
-    //     <>
-    //       <h1>{display.username}</h1>
-    //       <h2>{display.email}</h2>
-    //       <h3>{display.address}</h3>
-    //     </>
-    //   ))}
-    // </div>
+    
 
     <div>
-      <div className="card">
+      <div>
+      {first.map((display) => (
+        <>
+          <h1>{display.username}</h1>
+          <h2>{display.email}</h2>
+          <h3>{display.address}</h3>
+          <img src={`/Images/${display.Images}`} alt="" />
+        </>
+      ))}
+    </div>
+      {/* <div className="card">
             <div className="text">
               
                 <img src="https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png" alt=""/>
@@ -48,9 +50,11 @@ function Profile() {
                     et dolore magna aliqua. Ut enim ad minim veniam, 
                     quis nostrud exercitation ullamco laboris nisi ut.
                 </p>
-                <button onClick={Logoutone}>Log Out</button>
-            </div>
+                
+            </div> */}
 
+
+            <button onClick={Logoutone}>Log Out</button>
             <Link to={'Update'}>
               <div>Update Profile</div>
             </Link>
@@ -59,7 +63,7 @@ function Profile() {
             </Link>
             
         </div>
-    </div>
+    
   );
 }
 

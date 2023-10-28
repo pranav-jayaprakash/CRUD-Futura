@@ -12,11 +12,18 @@ function SignUp() {
     const [image,setimage] = useState({})
 
 
+
+
+    const formdata = new FormData()
+
+    formdata.append("username",username)
+    formdata.append("email",email)
+    formdata.append("address",address)
+    formdata.append("password",password)
+    formdata.append("Images",image)
 const display=(e)=>{
     e.preventDefault()
-    signUpdata({
-        username,email,address,password,image
-    })
+    signUpdata(formdata)
 
 
 }

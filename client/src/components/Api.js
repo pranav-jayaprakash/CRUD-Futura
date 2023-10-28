@@ -19,6 +19,7 @@ export const signUpdata =async (data)=>{
 }
 
 export const LoginData = async (data,dispatch)=>{
+    console.log("Data",data)
     try {
 
         const res = await publucRequest.post('/login',data)
