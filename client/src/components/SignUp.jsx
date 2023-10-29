@@ -56,7 +56,7 @@ function SignUp() {
       </form>
 
       <Link to={"/"}>
-        <div>Already have an accunt?</div>
+        <div>Already have an account?</div>
       </Link>
     </div>
   );
