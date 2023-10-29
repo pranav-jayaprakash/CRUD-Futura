@@ -5,7 +5,7 @@ const { verifyToken, verifyTokenandAuthorization } = require("../verifyToken");
 
 router.put("/:id",verifyToken,verifyTokenandAuthorization, async (req, res) => {
   
-  console.log(req.body,'backend data')
+  console.log(req.body,'backend data recieved')
   try {
     
 
