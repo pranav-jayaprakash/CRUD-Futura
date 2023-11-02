@@ -27,7 +27,7 @@ function UpdateContact() {
   }, []);
 
   
-  console.log("input data", {username,email,password,address})
+  console.log("inputs data", {username,email,password,address})
 
 
 
